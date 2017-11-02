@@ -5,15 +5,15 @@ The install.php installs priya on the system.
 
 You need to have php installed on your system or use:
 
-````apt-get install php -y
+```apt-get install php -y
 
 When you have installed php on your system do (sudo or as root):
 
-````sudo wget https://priya.software/install | php install
+```sudo wget https://priya.software/install | php install
 
 or
 
-````sudo wget https://raw.githubusercontent.com/like-it/Priya.Getting.Started/master/install.php | php install.php
+```sudo wget https://raw.githubusercontent.com/like-it/Priya.Getting.Started/master/install.php | php install.php
 
 it will ask you which directory to install to.
 
