@@ -155,7 +155,6 @@ function priya_version(){
 }
 
 function priya_install($dir='', $target=''){
-    var_dump($dir);
     $dir = rtrim($dir, DIRECTORY_SEPARATOR);
 
     if(!file_exists($target)){
@@ -163,9 +162,6 @@ function priya_install($dir='', $target=''){
     }
     $dir .= DIR_RESOURCE;
     $source = $dir . DIRECTORY_SEPARATOR . 'index.php';
-
-    var_dump('source....');
-    var_dump($source);
     $destination = $target . DIRECTORY_SEPARATOR . 'index.php';
     copy($source, $destination);
     $source = $dir . DIRECTORY_SEPARATOR . '.htaccess';
