@@ -118,6 +118,7 @@ $install = function($options){
     }
     apache2_restart();
     host_check($host_name);
+    priya_version();
 };
 
 $install('{
@@ -145,6 +146,13 @@ $install('{
         }
     }
 }');
+
+function priya_version(){
+    exec('priya version', $output);
+    foreach($output as $line){
+        echo $line . PHP_EOL;
+    }
+}
 
 function priya_install($dir='', $target=''){
     var_dump($dir);
