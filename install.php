@@ -19,7 +19,6 @@ $install = function($options){
         foreach($options->argument as $nr => $argument){
             if(substr($argument, 0, 2) == '--'){
                 $flag[] = substr($argument, 2);
-                //                 unset($options->argument[$nr]);
             } else {
                 $attribute[] = $argument;
             }
@@ -55,7 +54,7 @@ $install = function($options){
         $remote_url = rtrim(readline($text), ' ');
     }
 
-    if(substr($dir, 0, 1) !== '/'){
+    if(substr($dir, 0, 1) !== DIRECTORY_SEPARATOR){
         $dir = getcwd() . DIRECTORY_SEPARATOR . $dir;
     }
 
