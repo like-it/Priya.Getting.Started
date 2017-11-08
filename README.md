@@ -12,13 +12,13 @@ sudo apt-get install php -y
 When you have installed php on your system do (sudo or as root):
 
 ```bash
-sudo wget https://priya.software/install | php install
+sudo wget https://priya.software/install && php install
 ```
 
 or
 
 ```bash
-sudo wget https://raw.githubusercontent.com/like-it/Priya.Getting.Started/master/install.php | php install.php
+sudo wget https://raw.githubusercontent.com/like-it/Priya.Getting.Started/master/install.php && php install.php
 ```
 
 it will ask you which directory to install to.
