@@ -125,7 +125,7 @@ $install('{
     "submodule" : {
         "Priya" : {
             "url" : "https://github.com/like-it/Priya.git",
-            "tag" : "0.2.3"
+            "tag" : "0.2.4"
         },
         "Smarty" : {
             "url" : "https://github.com/smarty-php/smarty.git",
