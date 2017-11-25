@@ -71,6 +71,9 @@ $install = function($options){
         git_install();
     }
     git_init();
+    if($remote_url){
+        git_remote_url($remote_url);
+    }
 
     if(!empty($options) && !empty($options->submodule)){
         foreach($options->submodule as $name => $submodule){
@@ -142,7 +145,23 @@ $install('{
         "Json" : {
             "url" : "https://github.com/like-it/Library.Json.git",
             "comment": "master branch will have the latest Json version available (>=2017-02-07)"
-        }
+        },
+        "Simditor" : {
+            "url" : "https://github.com/like-it/Library.Simditor.git",
+            "comment": "master branch will have the latest Simditor version available (>=2.3.6)"
+        },
+        "Spectrum" : {
+            "url" : "https://github.com/like-it/Library.Spectrum.git",
+            "comment": "master branch will have the latest Spectrum version available (>=1.8.0)"
+        },
+        "Highlight" : {
+            "url" : "https://github.com/like-it/Library.Highlight.git",
+            "comment": "master branch will have the latest Highlight version available (>=9.12.0)"
+        },
+        "TinyMCE" : {
+            "url" : "https://github.com/like-it/Library.TinyMCE.git",
+            "comment": "master branch will have the latest TinyMCE version available (>=4.5.1)"
+        },
     }
 }');
 
@@ -268,4 +287,9 @@ function git_install(){
 function git_submodule_add($url='', $directory){
     echo 'Adding submodule (' . basename($directory) . ')' . PHP_EOL;
     exec('git submodule add -f ' . $url . ' ' . $directory);
+}
+
+function git_remote_url($url=''){
+    echo 'Adding remote url for "origin" (' . $url . ')' . PHP_EOL;
+    exec('git remote add origin ' . $url);
 }
