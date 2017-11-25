@@ -161,7 +161,7 @@ $install('{
         "TinyMCE" : {
             "url" : "https://github.com/like-it/Library.TinyMCE.git",
             "comment": "master branch will have the latest TinyMCE version available (>=4.5.1)"
-        },
+        }
     }
 }');
 
@@ -181,6 +181,9 @@ function priya_install($dir='', $target=''){
     $dir .= DIR_RESOURCE;
     $source = $dir . DIRECTORY_SEPARATOR . 'index.php';
     $destination = $target . DIRECTORY_SEPARATOR . 'index.php';
+    if(file_exists($source) === false){
+        return;
+    }
     copy($source, $destination);
     $source = $dir . DIRECTORY_SEPARATOR . '.htaccess';
     $destination = $target . DIRECTORY_SEPARATOR . '.htaccess';
